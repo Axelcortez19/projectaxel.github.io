@@ -1,0 +1,298 @@
+/* importeer Poppins font van fonts.google.com */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* importeer Helvetica font uit onze eigen mappen */
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("css/HelveticaNeue.otf");
+  font-style: normal;
+  font-weight: 300;
+}
+
+/* CSS reset, deze zet standaard alle witruimte (margin en padding) op 0. Je moet dan zelf overal weer margin en padding toevoegen op de elementen waar je dit wel wilt hebben.
+   Ook zorgen we dat voor alle block elementen de afmetingen niet alleen worden bepaald door de content, maar dat ook padding en border meetellen. 
+   Dit ontwerpt makkelijker.
+   Zie: https://www.internetingishard.com/html-and-css/css-box-model/#content-boxes-and-border-boxes  */
+*,
+html {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Stel een witte achtergrond in en geef de body een beetje margin, relatief ten opzichte van het schermformaat */
+body {
+  background-color: rgba(255, 255, 255, 0.322);
+  width: 100%;
+}
+
+.achtergrond{
+  background-image: url(/images/Frame\ 1.png);
+}
+/* onderstaande styles voor de <h1>, <h2>, <p> an <a> tags geven een voorbeeld
+   hoe je de geimporteerde fonts kunt gebruiken.
+   Op je eigen website mag je natuurlijk andere lettertypes, groottes, en
+   kleuren, etc. voor deze tags gebruiken. */
+
+h1 {
+  font-family: "helvetica";
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: 700; /* bold */
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-family: "helvetica";
+  font-size: 1.5em;
+  color: #ffffff;
+  background-color: #eb4f75;
+  font-weight: 700; /* bold */
+  width: fit-content;
+  padding: 5px 20px 5px 20px;
+  margin-bottom: 0.5em;
+}
+
+p {
+  font-family: "helvetica";
+  font-size: 1em;
+  color: #000000;
+  margin-bottom: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  
+}
+
+/* We gebruiken in HTML een <blockquote> tag om een citaat weer te geven en stylen dit als tegeltje. De truc hierbij is om een border-image op te geven. 
+   Dit plaatje bestaat uit 9 vlakjes, voor elke kant van het tegeltje: links, rechts, boven, onder, midden en de vier hoeken. 
+   Voor meer info, zie bijvoorbeeld:
+   https://www.w3schools.com/css/css3_border_images.asp
+   https://developer.mozilla.org/en-US/docs/Web/CSS/border-image    */
+
+blockquote {
+  font-family: "helvetica";
+  font-size: 0em;
+  color: #1b033a;
+  font-weight: 500; /* ietsje dikker dan normaal, maar minder dik dan bold */
+  text-align: center;
+  height: 577px;
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 1.8em auto 1.8em auto;
+  border: 5px solid transparent; /* Eerst een standaard border aanzetten. Deze zie je als het plaatje niet mocht werken (of niet, want transparant) */
+  border-image-width: 100px; /* we willen de border 100px groot */
+  border-image-slice: 100; /* het plaatje wordt in 9 stukken geknipt: het totale plaatje is 300x300 en elk gedeelte (vlakje) van de border is 100x100 */
+}
+
+.amsterdam {
+  text-align: center;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.border img {
+  position: fixed;
+  top: 16rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+   background-color: rgb(255, 255, 255); 
+} 
+
+li a {
+  font-family: "helvetica";
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 1rem 1rem;
+  text-decoration: none;
+}
+
+
+
+/* dit is homepage css */
+.content {
+  background-color: rgb(186, 35, 42);
+  width: auto;
+    margin: 2rem 2rem 2rem;
+    
+}
+
+.logo1{
+    width: 20rem;
+    height: auto;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+img {
+  width: 10rem;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.fotoje{
+  object-fit: cover;
+  width: 100%;
+}
+
+.beginknop{
+  position:fixed; left:5.5rem; top:20rem;
+  background-color: rgb(186, 35, 42);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 1rem 5rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "helvetica";
+  margin: 0 auto;
+  display: flex;
+}
+
+button {
+  background-color: rgb(186, 35, 42);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 1rem 5rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "helvetica";
+  margin: 0 auto;
+  display: flex;
+  
+}
+/* dit is homepage css */
+
+.slottext{
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/*dit is menu css*/
+
+.menubalk {
+  color: #ffffff;
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem 1rem;
+  font-family: Helvetica;
+  background-color: rgb(186, 35, 42);
+  border: solid 2px rgba(0, 0, 0, 0);
+
+}
+
+.menuPage {
+  height: 100vh;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 0px;
+  grid-template-rows: 80vh;
+  align-items: center;
+  justify-items: center; /* adjusted */
+}
+
+.grid-child{
+  border-style: solid;
+}
+
+.purple{
+background-color: rgb(186, 35, 42);
+grid-area: 1 / 2 / 2 / 3;
+align-self: center;
+justify-self: center;
+
+}
+
+.green{
+background-color: rgb(186, 35, 42);
+grid-area: 1 / 3 / 2 / 4;
+align-self: center;
+justify-self: center;
+
+}
+
+/*dit is de street pagina*/
+
+.kleur{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem 2rem;
+}
+
+
+
+/* dit is streetart css*/
+.resize{
+	width: 10rem;
+	height: auto;
+}
+
+
+.detailImage {
+  height: auto;
+  width: 100vw;
+  object-fit: cover;
+}
+
+.visitors {
+  color: #6487C5;
+  font-family: 'Filson Pro';
+  font-size: 1em;
+}
+
+.aboutwrapper {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 1rem;
+  list-style-type: none;
+}
+
+.aboutwrapper li {
+  margin-bottom: 1rem;
+}
+
+.aboutmap{
+  width: 100vw;
+  height: auto;
+  margin: 0 auto;
+}
+/* dit is streetart css*/
+
+
+
+/*SLOTMACHINE CSS*/
+.slotmachine { 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-left: 7%;
+}
+
